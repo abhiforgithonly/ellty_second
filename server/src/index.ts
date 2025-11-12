@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { initDatabase, getDatabase, saveDatabase, executeInsert } from './db';
 import { User, Discussion, Comment, Operation, CommentTree, DiscussionWithComments } from './models';
