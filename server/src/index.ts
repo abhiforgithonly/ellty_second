@@ -9,7 +9,11 @@ const app = express();
 const PORT = 3001;
 const JWT_SECRET = 'your-secret-key-change-in-production';
 
-app.use(cors());
+// Middleware setup
+app.use(cors({
+  origin: process.env.FRONTEND_URL || '*',
+  credentials: true
+}));
 app.use(express.json());
 
 // Middleware to verify JWT token
