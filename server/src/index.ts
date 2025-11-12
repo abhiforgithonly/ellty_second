@@ -6,7 +6,7 @@ import { initDatabase, getDatabase, saveDatabase, executeInsert } from './db';
 import { User, Discussion, Comment, Operation, CommentTree, DiscussionWithComments } from './models';
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 const JWT_SECRET = 'your-secret-key-change-in-production';
 
 // Middleware setup
